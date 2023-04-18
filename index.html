@@ -1,65 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
-  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
-</head>
-<body>
-  <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu anchors to sections -->
-  <header class="page__header">
-    <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
-    </nav>
-  </header>
-  <main>
-    <header class="main__hero">
-      <h1>Landing Page</h1>
-    </header>
-    <!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="your-active-class">
-      <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida...</p>
-      </div>
-    </section>
-    <section id="section2" data-nav="Section 2">
-      <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida...</p>
-      </div>
-    </section>
-    <section id="section3" data-nav="Section 3">
-      <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida...</p>
-      </div>
-    </section>
-    <section id="section4" data-nav="Section 4">
-      <div class="landing__container">
-        <h2>Section 4</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida...</p>
-      </div>
-    </section>
-  </main>
-  <footer class="page__footer">
-    <p>&copy Udacity</p>
-  </footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exploring the Universe</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
-  <script src="app.js"></script>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="page__header">
+      <nav class="navbar__menu">
+        <ul id="navbar__list"></ul>
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+
+<main>
+  <header class="main__hero">
+    <h1>Exploring the Universe</h1>
+  </header>
+
+  <section id="section1" data-nav="Introduction" class="your-active-class">
+    <div class="landing__container">
+      <h2>Introduction</h2>
+      <p>
+        The universe is everything that exists. It includes all matter, energy, and the laws of physics that
+        describe their behavior. The study of the universe is called astronomy, and it is one of the oldest
+        sciences in human history.
+      </p>
+    </div>
+  </section>
+
+  <section id="section2" data-nav="The Solar System">
+    <div class="landing__container">
+      <h2>The Solar System</h2>
+      <p>
+        The Solar System is the collection of planets and other objects that orbit around the Sun. There are
+        eight planets in our Solar System, and they are all very different from each other. In addition to the
+        planets, the Solar System also includes moons, asteroids, comets, and other objects.
+      </p>
+    </div>
+  </section>
+
+  <section id="section3" data-nav="Stars and Galaxies">
+    <div class="landing__container">
+      <h2>Stars and Galaxies</h2>
+      <p>
+        A star is a massive, luminous ball of plasma that is held together by its own gravity. There are
+        billions of stars in the universe, and they come in a wide range of sizes and colors. Galaxies are
+        collections of stars, gas, and dust that are held together by gravity. The Milky Way is our home galaxy,
+        and it contains billions of stars and many other objects.
+      </p>
+    </div>
+  </section>
+
+  <section id="section4" data-nav="Black Holes">
+    <div class="landing__container">
+      <h2>Black Holes</h2>
+      <p>
+        A black hole is a region of space where the gravitational pull is so strong that nothing, not even light,
+        can escape. Black holes are formed when massive stars collapse in on themselves. They are some of the
+        most mysterious objects in the universe, and scientists are still learning about how they work.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="page__footer">
+ 
+    <p id="footer-text"></p>
+    <p>Designed by Jide Awoniyi</p>
+  </footer>
+  
+  
+<button id="scrollToTopButton" class="scroll-to-top-btn" title="Go to top"><i class="fas fa-arrow-up"></i> Top</button>
+
+
+<script src="js/app.js"></script>
 </body>
 </html>

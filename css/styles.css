@@ -1,4 +1,5 @@
-/* General Styles */
+/* Global styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,82 +8,219 @@
   
   body {
     font-family: 'Fira Sans', sans-serif;
-    color: #333;
-    font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.7;
   }
+  
+  /* Navbar styles */
   
   .page__header {
     background-color: #333;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+  }
+  
+  .navbar__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
   }
   
   .navbar__menu ul {
-    list-style-type: none;
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    list-style: none;
+    margin-right: 20px;
   }
   
   .navbar__menu li {
-    padding: 0 20px;
+    margin-right: 20px;
   }
   
   .navbar__menu a {
     color: #fff;
     text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
   }
   
   .navbar__menu a:hover {
-    color: #F3C98B;
+    color: #f1c40f;
   }
   
+  /* Hero section styles */
+  
   .main__hero {
-    background-color: #F3C98B;
-    height: 300px;
+    height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
+    background-image: url("../image/landing-page.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .main__hero h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Section styles */
+  
+  .landing__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+
+@media (max-width: 767px) {
+    .landing__container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
   
   section {
-    padding: 50px 20px;
-    border-bottom: 1px solid #ccc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
-  .landing__container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+  #section1 {
+
+    background-color: #f9ebd2;
   }
   
-  .page__footer {
+  #section2 {
+ 
+    background-color: #d5e5f5;
+  }
+  
+  #section3 {
+    background-color: #e1d5e7;
+  }
+  
+  #section4 {
+
+    background-color: #f5d6d8;
+  }
+  
+  section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  
+  /* Active state styles */
+  
+  .active-section {
+    border: 5px solid #f1c40f;
+  }
+  
+  .active-link {
+    color: #f1c40f;
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 768px) {
+    .navbar__menu a {
+      font-size: 1rem;
+    }
+    
+    .main__hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    section h2 {
+      font-size: 2rem;
+    }
+  
+    section p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar__menu {
+      flex-direction: column;
+    }
+  
+    .navbar__menu ul {
+      margin: 10px 0;
+    }
+  
+    .navbar__menu li {
+      margin-right: 10px;
+    }
+  }
+  
+/* Scroll to top button styles */
+
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     background-color: #333;
-    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  .scroll-to-top-btn.show-scroll-top {
     display: flex;
     align-items: center;
-    justify-content: center;
+  }
+  
+  .scroll-to-top-btn:hover {
+    background-color: #555;
+  }
+  
+  .scroll-to-top-btn i {
+    margin-right: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .scroll-to-top-btn {
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+    }
+  }
+  
+
+  /* Footer styles */
+  .page__footer {
+    background-color: #333;
     color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
   }
   
-  .your-active-class {
-    background-color: rgba(243, 201, 139, 0.2);
+  #footer-text {
+    font-size: 18px;
+    margin: 10px 0;
   }
   
-  .navbar__menu .menu__link--active {
-    color: #F3C98B;
+  @media (max-width: 768px) {
+    .page__footer {
+      font-size: 14px;
+    }
   }
   
