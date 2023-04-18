@@ -8,7 +8,7 @@ Dependencies
 This project has no external dependencies. However, it uses Font Awesome icons for the scroll-to-top button. The Font Awesome CSS stylesheet is included in the project files and is linked to in the head section of the index.html file.
 
 Credits
-This project was built by [Your Name]. The landing page image was sourced from Unsplash.
+This project was built by Jide Awoniyi. The landing page image was sourced from https://neural.love/.
 
 License
 This project is licensed under the MIT License.
