@@ -1,0 +1,88 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Fira Sans', sans-serif;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .page__header {
+    background-color: #333;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar__menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .navbar__menu li {
+    padding: 0 20px;
+  }
+  
+  .navbar__menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar__menu a:hover {
+    color: #F3C98B;
+  }
+  
+  .main__hero {
+    background-color: #F3C98B;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  section {
+    padding: 50px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .landing__container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .page__footer {
+    background-color: #333;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .your-active-class {
+    background-color: rgba(243, 201, 139, 0.2);
+  }
+  
+  .navbar__menu .menu__link--active {
+    color: #F3C98B;
+  }
+  
